@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight} from 'react-native';
 
 export default class MyScene extends Component {
-  getDefaultProps() {
-    return {
-      title: 'MyScene'
-    };
-  }
 
   render() {
     return (
       <View>
-        <Text style={{color:'red', fontSize:24}}>Hi! My name is {this.props.title}.</Text>
+        <Text>Current Scene: { this.props.title }</Text>
+
+        <TouchableHighlight onPress={this.props.onForward}>
+          <Text>Tap me to load the next scene</Text>
+        </TouchableHighlight>
+
+        <TouchableHighlight onPress={this.props.onBack}>
+          <Text>Tap me to go back</Text>
+        </TouchableHighlight>
+
       </View>
     )
   }
