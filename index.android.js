@@ -19,4 +19,5 @@ class YoDawgApp extends Component {
 
 }
 
+/// This is dummy
 AppRegistry.registerComponent('TestReactNative1', () => YoDawgApp);  
